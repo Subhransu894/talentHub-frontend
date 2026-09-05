@@ -22,7 +22,7 @@ function Register(){
         try {
 
             const response = await fetch(
-                "http://localhost:4000/api/auth/register",
+                "https://talenthub-backend-0v0r.onrender.com/api/auth/register",
                 {
                     method:"POST",
                     headers:{

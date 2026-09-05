@@ -23,7 +23,7 @@ function ApplyJob(){
             formData.append("resume",resume)
             formData.append("coverLetter",coverLetter)
 
-            const response = await fetch("http://localhost:4000/api/applications",{
+            const response = await fetch("https://talenthub-backend-0v0r.onrender.com/api/applications",{
                 method:"POST",
                 headers:{
                     Authorization: `Bearer ${token}`

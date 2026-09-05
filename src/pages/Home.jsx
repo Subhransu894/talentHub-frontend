@@ -15,7 +15,7 @@ function Home(){
     const fetchJobs=async()=>{
         try {
             const response = await fetch(
-                `http://localhost:4000/api/jobs?search=${search}&location=${location}&salaryMin=${salaryMin}&employmentType=${employmentType}&workMode=${workMode}&sort=${sort}`
+                `https://talenthub-backend-0v0r.onrender.com/api/jobs?search=${search}&location=${location}&salaryMin=${salaryMin}&employmentType=${employmentType}&workMode=${workMode}&sort=${sort}`
             )
             const data =await response.json()
             setJobs(data.jobs)
@@ -36,7 +36,7 @@ function Home(){
 
         try {
             const response = await fetch(
-                "http://localhost:4000/api/bookmarks",
+                "https://talenthub-backend-0v0r.onrender.com/api/bookmarks",
                 {
                     headers:{
                         Authorization:`Bearer ${token}`

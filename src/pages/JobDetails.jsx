@@ -36,7 +36,7 @@ function JobDetails(){
         try {
 
             const response = await fetch(
-                "http://localhost:4000/api/ai/interview-preparation",
+                "https://talenthub-backend-0v0r.onrender.com/api/ai/interview-preparation",
                 {
                     method:"POST",
                     headers:{
@@ -76,7 +76,7 @@ function JobDetails(){
     }
     const fetchJob=async()=>{
         try {
-            const response = await fetch(`http://localhost:4000/api/jobs/${id}`)
+            const response = await fetch(`https://talenthub-backend-0v0r.onrender.com/api/jobs/${id}`)
             const data = await response.json()
             if(!response.ok){
                 toast.error(data.message)

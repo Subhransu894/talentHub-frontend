@@ -24,7 +24,7 @@ function Profile(){
             return
         }
         try {
-            const response = await fetch("http://localhost:4000/api/users/profile",{
+            const response = await fetch("https://talenthub-backend-0v0r.onrender.com/api/users/profile",{
                 headers:{
                     Authorization: `Bearer ${token}`
                 }
@@ -67,7 +67,7 @@ function Profile(){
         const token = localStorage.getItem("token")
         try {
             const response = await fetch(
-                "http://localhost:4000/api/users/profile",
+                "https://talenthub-backend-0v0r.onrender.com/api/users/profile",
                 {
                     method: "PATCH",
                     headers: {

@@ -10,7 +10,7 @@ function JobCard({job,bookmarkedJobs, setBookmarkedJobs}){
         } 
         try {
              if(isBookmarked){ 
-                const response = await fetch( `http://localhost:4000/api/bookmarks/${job._id}`, 
+                const response = await fetch( `https://talenthub-backend-0v0r.onrender.com/api/bookmarks/${job._id}`, 
                     { method:"DELETE", headers:{ Authorization:`Bearer ${token}` } } 
                 )
                 const data = await response.json() 
@@ -21,7 +21,7 @@ function JobCard({job,bookmarkedJobs, setBookmarkedJobs}){
                 setBookmarkedJobs( bookmarkedJobs.filter( (id) => id !== job._id && id?._id !== job._id ) ) 
                 toast.success("Bookmark removed.") 
             }else{ 
-                const response = await fetch( `http://localhost:4000/api/bookmarks/${job._id}`,
+                const response = await fetch( `https://talenthub-backend-0v0r.onrender.com/api/bookmarks/${job._id}`,
                      { 
                         method:"POST", 
                         headers:{ 

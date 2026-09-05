@@ -19,7 +19,7 @@ function BookmarkedJobs(){
 
         try {
             const response = await fetch(
-                "http://localhost:4000/api/bookmarks",
+                "https://talenthub-backend-0v0r.onrender.com/api/bookmarks",
                 {
                     headers:{
                         Authorization:`Bearer ${token}`

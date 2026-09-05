@@ -19,7 +19,7 @@ function MyApplications(){
         try {
 
             const response = await fetch(
-                "http://localhost:4000/api/applications/my",
+                "https://talenthub-backend-0v0r.onrender.com/api/applications/my",
                 {
                     headers:{
                         Authorization:`Bearer ${token}`

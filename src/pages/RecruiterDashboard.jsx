@@ -38,7 +38,7 @@ function RecruiterDashboard() {
         try {
 
             const response = await fetch(
-                "http://localhost:4000/api/jobs"
+                "https://talenthub-backend-0v0r.onrender.com/api/jobs"
             )
 
             const data = await response.json()
@@ -62,7 +62,7 @@ function RecruiterDashboard() {
         try {
 
             const response = await fetch(
-                "http://localhost:4000/api/applications/recruiter",
+                "https://talenthub-backend-0v0r.onrender.com/api/applications/recruiter",
                 {
                     headers:{
                         Authorization:`Bearer ${token}`
@@ -104,7 +104,7 @@ function RecruiterDashboard() {
         try {
 
             const response = await fetch(
-                "http://localhost:4000/api/jobs",
+                "https://talenthub-backend-0v0r.onrender.com/api/jobs",
                 {
                     method:"POST",
                     headers:{
@@ -163,7 +163,7 @@ function RecruiterDashboard() {
         try {
 
             const response = await fetch(
-                `http://localhost:4000/api/applications/${applicationId}/status`,
+                `https://talenthub-backend-0v0r.onrender.com/api/applications/${applicationId}/status`,
                 {
                     method:"PATCH",
                     headers:{
@@ -199,7 +199,7 @@ function RecruiterDashboard() {
         setAiJobId(jobId)
         try {
             const response = await fetch(
-                `http://localhost:4000/api/ai/hiring-assistant/${jobId}`,
+                `https://talenthub-backend-0v0r.onrender.com/api/ai/hiring-assistant/${jobId}`,
                 {
                     method:"POST",
                     headers:{
